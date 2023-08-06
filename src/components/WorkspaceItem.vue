@@ -102,7 +102,7 @@ li {
       &:hover {
         background-color: $color-background--hover2;
       }
-      &:active {
+      &.active {
         transform: rotate(90deg);
       }
     }
