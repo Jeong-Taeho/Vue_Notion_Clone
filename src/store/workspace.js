@@ -44,7 +44,7 @@ export default {
       });
       dispatch("findWorkspacePath");
       if (!workspaces.length) {
-        dispatch("createWorkspace");
+        await dispatch("createWorkspace");
       }
     },
     async readWorkspace({ commit }, payload) {
@@ -79,7 +79,7 @@ export default {
         id,
         method: "DELETE",
       });
-      dispatch("readWorkspaces");
+      await dispatch("readWorkspaces");
 
       if (id === parseInt(router.currentRoute.value.params.id, 10)) {
         router.push({
